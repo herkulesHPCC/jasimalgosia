@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 Author: W3layouts
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -62,6 +62,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="header">
 		<div class="container">
 			<div class="header-nav">
+			<div class="logo">
+							<h1><a class="navbar-brand" href="../index.php"><img  style=" border: 0px !important; height:80%; width:15%;" src="../images/logo.png" style='width:30%;' ></a></h1>
+						</div>
 				<nav class="navbar navbar-default">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -71,9 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					  </button>
-					  <div class="logo">
-							<h1><a class="navbar-brand" href="../index.php"><img class="logo" style=" border: 0px !important; height:80%; width:20%;" src="../images/logo.png" style='width:30%;' ></a></h1>
-						</div>
+					  
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -87,13 +88,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</div>
 	</div>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script src="gallery.js"></script>
 <!-- //header -->
 
 
 
 <!-- gallery -->
 	<div id="gallery" class="gallery">
-		<div class="container"></br></br></br></br>
+		<div class="container"></br></br></br></br></br></br></br></br>
 			<h3>Galeria - <?php echo ' '.$_GET['kategoria'].''; ?></h3>
 		
 			<div class="gallery-grids" >
@@ -101,18 +110,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<ul id="da-thumbs" class="da-thumbs">
 
 						<?php
-
 						$grupa = $_GET['id'];
 						if ($grupa < 6)
 						{
 						echo '<p>Szanowny Kliencie informujemy, iż zamówiony tort może nieco odbiegać od tortu ze zdjęcia. Do dekoracji tortów używamy owoców sezonowych dostępnych w zależności od pory roku.<p></br>';
 						}
 						 $pdo = $pdo->query( "SELECT * FROM img WHERE grupa = '$grupa' order by nr DESC ");
-
 						 foreach( $pdo->fetchAll() as $value ) {
 							echo '<li style="">
-							<a style=" width: 330px !important; height: 250px !important;" href="torty/' . $value['nr'] . '.jpg" class=" mask b-link-stripe b-animate-go "  title="">
-								<img  class="hover-shadow" style=" width: 330px !important; height: 250px !important; border:1px solid #FF9900;" src="torty/'. $value['nr'] .'.jpg" alt="" />
+							<a style=" width: 330px !important; height: 250px !important;" href="torty/' . $value['nr'] . '.jpg" class="fancybox" rel="ligthbox" title="">
+								<img class="zoom img-fluid " style=" width: 330px !important; height: 250px !important; border:1px solid #FF9900;" src="torty/'. $value['nr'] .'.jpg" alt="" />
 								<div>
 									<h5>' . $value['nazwa'] . '</h5>
 									<span>' . $value['nr'] . '</span>
@@ -135,7 +142,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					$(function() {
 					
 						$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
-
 					});
 				</script>
 			</div>
@@ -171,6 +177,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								
 			});
 	</script>
-
 </body>
 </html>
