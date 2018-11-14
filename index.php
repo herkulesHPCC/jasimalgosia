@@ -23,8 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  torty komunijne, torty urodzinowe, pieczywo, pieczywo jasne, pieczywo ciemne, inne pieczywo, bułki słodkie, torty okazyjne, przekąski, mini pizza, krokiety, 
  rogaliki, herbatniki, delicje, ciastka maślane, kokosanki, chleby ozdobne, chałka, paluch, kanapki, kanapki drobiowe, kanapki z mozzarellą, pizza bolońska,
  bigosówka, sałatka firmowa, kanapka vip, kanapka z pastą jajeczną, kanapka z pasztetem, chleb, bułki, kajzerki, bułka poznańska " />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -713,7 +712,7 @@ font-size: 17px; list-style-type: none" ><b>Konsultant weselny- obsługa przyję
 				</ul>
 			
 				
-				<ul class="ever" style=" word-wrap:break-word; float: right;  margin-left: 1px; margin-right: 20px; margin-top: 20px; text-align:justify; color: rgb(76, 76, 76);
+				<ul class="ever" style=" word-wrap:break-word; float: right;  width:500px ;margin-left: 1px; margin-right: 20px; margin-top: 20px; text-align:justify; color: rgb(76, 76, 76);
 font-family: Open Sans, sans-serif;
 font-size: 17px;" >
 					
@@ -826,21 +825,7 @@ font-size: 17px; list-style-type: none" ><b>Konsultant weselny- obsługa przyję
 		<script src="js/bootstrap.js"> </script>
 <!-- //for bootstrap working -->
 <!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
+	
 <!-- //here ends scrolling icon -->
 </body>
 </html>
